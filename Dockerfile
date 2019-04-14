@@ -8,7 +8,9 @@ RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get install --yes --no-install-recommends \
                     apache2 libapache2-mod-php \
                     php php-common php-gd php-curl php-mail php-mail-mime php-db php-mysqlnd \
-                    mysql-server mysql-client libmysqlclient-dev 
+                    mysql-server mysql-client libmysqlclient-dev \
+ && mkdir -p /var/run/mysqld \
+ && chown mysql:mysql /var/run/mysqld
 
 COPY supervisor-apache2.conf /etc/supervisor/conf.d/apache2.conf
 COPY supervisor-mysql.conf /etc/supervisor/conf.d/mysql.conf
