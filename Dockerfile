@@ -1,4 +1,4 @@
-FROM 783872453/ubuntu-unattended-upgrades:latest
+FROM frauhottelmann/ubuntu-unattended-upgrades:latest
 
 RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
