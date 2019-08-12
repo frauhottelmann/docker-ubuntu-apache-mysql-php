@@ -1,4 +1,4 @@
-FROM frauhottelmann/docker-ubuntu-unattended-upgrades:latest
+FROM frauhottelmann/docker-ubuntu-unattended-upgrades:18.04
 
 RUN DEBIAN_FRONTEND=noninteractive \
  && apt-get update \
